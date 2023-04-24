@@ -1,0 +1,440 @@
+/* estilos generales*/
+
+html, body{
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 62.5%;
+    font-family: 'lato', sans-serif;
+}
+
+#pantalla-dividida{
+    display: flex;
+}
+
+.izquierda{
+    width: 50%;       
+    height: 100vh;
+    position: relative;
+}
+
+.img-ppal{
+    width: inherit;
+    height: auto;
+    overflow: hidden;
+    object-position: 0 100%;
+    position: fixed;
+    background-color: #FD9726;
+}
+
+.img-float{
+    width: 30rem;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    position: fixed;
+    top: 47rem;
+    left: 72rem;
+    float: left;
+    transform: translatey(0px);
+    animation: float 8s ease-in-out infinite;
+}
+
+/* animación img-float*/
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+
+.derecha{
+    width: 50%;
+    height: 100%;
+    padding: 1% 2% 0 12%;
+    overflow: scroll;
+}
+
+h1{
+    font-family: 'Chicle', cursive;
+    font-size: 7rem;
+    letter-spacing: 0.05em; 
+    color: #551D4E; 
+    margin-top: 0;
+}
+
+h2{
+    font-family: 'Chicle', cursive;
+    font-size: 4.5rem;
+    letter-spacing: 0.05em;
+    color: #FD9726;
+    margin-bottom: 5px;
+}
+
+.h2-rojo{
+    color: #FD672F;
+}
+
+h3{
+    font-family: 'Chicle', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    color: #005663;  
+}
+
+.h3-rosa{
+    color: #FD2A68;
+}
+p{
+    font-size: 2rem;
+    color: #0D0D0D;
+    line-height: 3rem;
+}
+
+.cursiva{
+    font-style: oblique;
+}
+
+li{
+    list-style:none;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    font-weight: 900;
+    color: #0D0D0D;
+    margin-left: 4rem;
+}
+
+li:hover{
+    background-position: 0 100%;
+}
+
+.turquesa{
+    background: linear-gradient(to right, #4FCFC0, #4FCFC0 50%,  #0D0D0D 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s ease;
+    text-decoration: none;
+}
+
+.rojo{
+    background: linear-gradient(to right, #FF6730, #FF6730 50%,  #0D0D0D 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s ease;
+    text-decoration: none;
+}
+
+.naranja{
+    background: linear-gradient(to right, #FD9726,#FD9726 50%,  #0D0D0D 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s ease;
+    text-decoration: none;
+}
+
+.rosa{
+    background: linear-gradient(to right, #FD2A68,#FD2A68 50%,  #0D0D0D 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s ease;
+    text-decoration: none;
+}
+
+.mora{
+    background: linear-gradient(to right, #7300c0,#7300c0 50%,  #0D0D0D 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s ease;
+    text-decoration: none;
+}
+
+/*SVG*/
+.icon-text{
+color: #4FCFC0;
+text-align: center;
+font-size: 1rem;
+display: inline-block;
+}
+
+.svg-behance{
+    fill: #05454F;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 4rem;
+    transition: 0.2s;
+}
+.svg-whatsapp{
+    fill: #05454F;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 4rem;
+    transition: 0.2s;
+}
+.svg-mail{
+    fill: #05454F;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 4rem;
+    transition: 0.2s;
+}
+
+.svg-mail:hover{
+    fill: #4FCFC0;
+    color: #4FCFC0;
+} 
+.svg-behance:hover{
+    fill: #4FCFC0;
+    color: #4FCFC0;
+} 
+.svg-whatsapp:hover{
+    fill: #4FCFC0;
+    color: #4FCFC0;
+}
+
+.footer{
+    color:#7B7B7B;
+    font-size: 1rem;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1800px) {
+    .img-float{
+        width: 25rem;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        position: fixed;
+        top: 47rem;
+        left: 62rem;
+        float: left;
+        transform: translatey(0px);
+        animation: float 8s ease-in-out infinite;
+    }  
+}
+@media screen and (max-width: 1200px) {
+    .img-float{
+        width: 25rem;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        position: fixed;
+        top: 35rem;
+        left: 30rem;
+        float: left;
+        transform: translatey(0px);
+        animation: float 8s ease-in-out infinite;
+    }  
+}
+
+@media screen and (max-width: 900px) {
+    #pantalla-dividida{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .izquierda{
+        width: 100%;       
+        height: auto;
+        padding: 0;
+    }
+    
+    .img-ppal{
+        width: 100%;
+        height: auto;
+        position: unset;
+    
+    }.img-float{
+        width: 30rem;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        top: 62rem;
+        left: 50rem;
+        float: left;
+        transform: translatey(0px);
+        animation: float 8s ease-in-out infinite;
+    } 
+
+    .derecha{
+        width: 100%;
+        height: auto;
+        padding: 3rem;
+    }
+
+    
+    .svg-whatsapp{
+        fill: #FF6730;
+        width: 4rem;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 3rem;
+    }
+
+    .svg-mail{
+        fill: #FD9726;
+        width: 4rem;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 3rem;
+    }
+    .svg-behance{
+        fill: #FD2A68;
+        width: 4rem;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 3rem;
+    }
+    .svg-mail:hover{
+        fill: #FF6730;
+    }
+    .svg-mail:hover{
+        fill: #FD9726;
+    }
+    .svg-behance:hover{
+        fill: #FD2A68;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    #pantalla-dividida{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .izquierda{
+        width: 100%;       
+        height: auto;
+        padding: 0;
+    }
+    
+    .img-ppal{
+        width: 100%;
+        height: auto;
+        position: unset;
+    
+    }.img-float{
+        width: 15rem;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        top: 22rem;
+        left: 19rem;
+        float: left;
+        transform: translatey(0px);
+        animation: float 8s ease-in-out infinite;
+    } 
+
+    .derecha{
+        width: 100%;
+        height: auto;
+        padding: 3rem;
+    }
+
+    h1{
+        font-family: 'Chicle', cursive;
+        font-size: 6rem;
+        letter-spacing: 0.05em; 
+        color: #551D4E; 
+        margin-top: 0;
+    }
+    
+    h2{
+        font-family: 'Chicle', cursive;
+        font-size: 3.7rem;
+        letter-spacing: 0.05em;
+        color: #FD9726;
+        margin-bottom: 5px;
+    }
+    
+    h3{
+        font-family: 'Chicle', cursive;
+        font-size: 2.5rem;
+        letter-spacing: 0.05em;
+        color: #005663;  
+    }
+    
+    p{
+        font-size: 2rem;
+        color: #0D0D0D;
+        line-height: 3rem;
+    }
+    
+    li{
+        list-style:none;
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 900;
+        color: #0D0D0D;
+        margin-left: 3rem;
+    }    
+    
+    .svg-whatsapp{
+        fill: #FF6730;
+        width: 4rem;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 3rem;
+    }
+
+    .svg-mail{
+        fill: #FD9726;
+        width: 4rem;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 3rem;
+    }
+    .svg-behance{
+        fill: #FD2A68;
+        width: 4rem;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 3rem;
+    }
+    .svg-mail:hover{
+        fill: #FF6730;
+    }
+    .svg-mail:hover{
+        fill: #FD9726;
+    }
+    .svg-behance:hover{
+        fill: #FD2A68;
+    }
+
+}
